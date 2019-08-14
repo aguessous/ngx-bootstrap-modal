@@ -1,3 +1,19 @@
-<p>
-  some works!
-</p>
+<div class="modal-header">
+  <h4 class="modal-title pull-left"> {{ title }} </h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  This is a modal. Hello {{ hello }}
+
+  <h2>{{data.name}} </h2>
+  <h3>This is a modal : {{data.id}} </h3>
+  <div>Price: ${{data.price}}</div>
+  <div>
+     <span>Location: {{data.location.address}}</span>
+     <span>City: {{data.location.city}}</span>
+     <span>Country: {{data.location.country}}</span>
+  </div>
+
+</div>

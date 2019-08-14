@@ -1,9 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
 
-<h4>Ngx Boostrap Modal Component</h4>
-<div (click)="openModal()" class="btn btn-primary">Modal Component</div>
+<div>
+    <h1>Ngx Boostrap Modal Component</h1>
 
+    <hr/>
+
+ 
+    <div class="row">
+      <div *ngFor="let event of events" class="col-md-12" >
+     
+
+        <h2>{{event.name}} </h2>
+        <div (click)="afficher(event.id)" class="btn btn-primary">Modal Component {{event.id}} </div>
+        <div>Price: ${{event.price}}</div>
+        <div>
+           <span>Location: {{event.location.address}}</span>
+           <span>City: {{event.location.city}}</span>
+           <span>Country: {{event.location.country}}</span>
+        </div>
+
+        <hr/>
+
+      </div>
+     </div>
+   
+</div>
 
 </div>
 
